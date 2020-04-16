@@ -1,9 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1,
+  "version": 1, 
   "newProjectRoot": "projects",
   "projects": {
-    "my-recipes": {
+    "angular-course": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/my-recipes",
+            "outputPath": "dist/angular-course",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,7 +24,7 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/bootstrap3/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -63,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "my-recipes:build"
+            "browserTarget": "angular-course:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "my-recipes:build:production"
+              "browserTarget": "angular-course:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "my-recipes:build"
+            "browserTarget": "angular-course:build"
           }
         },
         "test": {
@@ -111,15 +111,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "my-recipes:serve"
+            "devServerTarget": "angular-course:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "my-recipes:serve:production"
+              "devServerTarget": "angular-course:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "my-recipes"
+  "defaultProject": "angular-course"
 }
